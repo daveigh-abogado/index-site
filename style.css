@@ -1,0 +1,258 @@
+body {
+    font-family: "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    border-sizing: border-box;
+    background: #F8F7F7;
+    color: #0d0d0d;
+}
+
+a {
+    color: #0d0d0d;
+}
+
+main {
+    position: relative;
+    padding: 0.75rem;
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+#index {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #index {
+        margin-top: 2rem;
+    }
+}
+
+#side {
+    position: sticky;
+    top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    height: 100%;
+    width: 320px;
+}
+
+@media only screen and (max-width: 600px) {
+    #side {
+        width: 100%;
+        position: relative;
+    }
+}
+
+#side .wrapper {
+    width: 100%;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 3.5em;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -1.5px;
+    line-height: 90%;
+}
+
+h1 sup {
+    font-size: 0.6rem;
+    margin-left: -0.25rem;
+    letter-spacing: 0.25px;
+}
+
+p {
+    margin: 0;
+    margin-top: 1rem;
+    max-width: 600px;
+    font-size: 0.8rem;
+    line-height: 140%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#actions a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+}
+
+#actions a:hover {
+    cursor: pointer;
+}
+
+hr {
+    border: 0.5px solid #F8F7F7;
+    margin: 0.5em 0;
+}
+
+h3 {
+    display: inline;
+    font-weight: normal;
+}
+
+#search {
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+    padding-top: 0;
+    color: #0d0d0d;
+}
+
+#search input {
+    background: none;
+    width: 90%;
+    max-width: 310px;
+    border: 0;
+    border-bottom: 1px solid #0d0d0d;
+    padding: 0.5rem 0;
+    color: #0d0d0d;
+    font-size: 0.7rem;
+}
+
+#search input::placeholder {
+    color: #0d0d0d;
+}
+
+#filter {
+    padding: 0.5em 0;
+    margin: -0.5rem;
+}
+
+#filter a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0d0d0d;
+    border-radius: 12px;
+    padding: 0.25em 0.5em;
+    font-size: 0.8rem;
+    margin: 0.1rem;
+    border: 1px solid #F8F7F7;
+}
+
+#filter a:hover,
+#filter a[selected] {
+    border: 1px solid #F8F7F7;
+    background: #0d0d0d;
+    cursor: pointer;
+    color: #F8F7F7;
+}
+
+#index .r {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+#index ._link {
+    display: flex;
+    width: 100%;
+}
+
+#index .r {
+    padding: 0.5em 0.25em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    #index .r {
+        padding: 0.75rem 0;
+    }
+}
+
+#index .r a {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+
+#index .r:hover ._title h2 {
+    border: 1px solid #0d0d0d;
+}
+
+#index .r:hover>._mirror a {
+    color: #0d0d0d;
+}
+
+#index .r * {
+    margin-right: 0.5rem;
+}
+
+.r ._title {
+    width: 90%;
+    margin-bottom: 0.5rem;
+}
+
+.r ._title h2 {
+    font-weight: normal;
+    font-size: 1.1rem;
+    border: 1px solid #F8F7F7;
+    border-radius: 12px;
+    margin: 0rem -0.3rem;
+    padding: 0.25rem;
+}
+
+.r ._type {
+    display: inline;
+    font-size: 0.65rem;
+    width: 10%;
+}
+
+.r ._desc {
+    width: 100%;
+    line-height: 150%;
+}
+
+.r ._desc p {
+    padding: 0;
+    margin: 0;
+    margin-top: -0.25rem;
+    font-size: 0.7rem;
+    max-width: 90%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+._mirror {
+    margin: 0.25rem 0.1rem !important;
+    display: flex;
+}
+
+#index .r ._mirror a {
+    background: #F8F7F7;
+    text-decoration: none;
+    padding: 0.25em;
+    margin: 0.1rem;
+    font-size: 11px;
+    text-transform: uppercase;
+    border: 1px solid #0d0d0d;
+    border-radius: 8px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+}
+
+#index .r ._mirror a:hover {
+    background: #0d0d0d;
+}
+
+/*# sourceMappingURL=style.css.map */

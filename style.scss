@@ -1,0 +1,266 @@
+$r: #BC4025;
+$w: #F8F7F7;
+$y: #ffff6f;
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0; padding: 0;
+  border-sizing: border-box;
+  background: $w;
+  color: $r;
+}
+
+a{
+  color: $r;
+}
+
+main{
+  position: relative;
+  padding: .75rem;
+  display: flex;
+  
+@media only screen and (max-width: 600px) {
+  flex-direction: column;
+  
+  }
+  
+}
+
+
+#index{
+  width: calc(100%);
+  margin: 0;
+  padding: 0;
+  
+  @media only screen and (max-width: 600px) {
+  margin-top: 2rem;
+}
+}
+
+
+#side{
+  position: sticky;
+  top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  height: 100%;
+  width: 240px;
+@media only screen and (max-width: 600px) {
+  width: 100%;
+  position: relative;
+  }
+  
+  .wrapper{
+    width: 100%;
+  }
+}
+
+h1{
+  font-weight: 300;
+  font-size: 3.5em;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -1.5px;
+  line-height: 90%;
+  
+  sup{
+    font-size: .6rem;
+    margin-left: -.25rem;
+    letter-spacing: .25px;
+  }
+}
+
+p{
+  margin: 0;
+  margin-top: 1rem;
+  max-width: 600px;
+  font-size: .7rem;
+  line-height: 140%;
+}
+
+a{
+  text-decoration: none;
+}
+#actions a{ 
+display: inline-block; 
+  margin-right: .5rem;
+    font-size: .7rem;
+}
+
+
+#actions a:hover{
+  cursor: pointer;
+}
+
+hr{
+  border: .5px solid $w;
+  margin: .5em 0;
+}
+
+// filter
+
+h3{
+  display: inline;
+  font-weight: normal;
+}
+
+#search{
+  padding: .5em 0;
+  margin: .5em 0;
+  padding-top: 0;
+  color: $r;
+  
+  input{
+    background: none;
+    width: 90%;
+    max-width: 180px;
+    border: 0;
+    border-bottom: 1px solid $r;
+    padding: .5rem 0;
+  color: $r;
+    font-size: .7rem;
+  }
+  
+  input::placeholder{
+    color: $r;
+  }
+  
+}
+
+#filter{
+  padding: .5em 0;
+  margin: -.5rem;
+}
+
+#filter a{
+    display: inline-block;
+  text-decoration: none;
+  color: $r;
+  border-radius: 12px;
+  padding: .25em .5em;
+  font-size: .7rem;
+  margin: .1rem;
+  border:1px solid $w;
+}
+#filter a:hover, #filter a[selected]{ 
+  border:1px solid $r;
+  background: $w;
+  cursor: pointer;
+  color: $r;
+}
+
+// r = resource
+
+
+#index .r{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+//  border-bottom: 1px solid $w;
+}
+
+
+#index ._link{
+  display: flex;
+  width: 100%;
+}
+
+#index .r{
+  padding: .5em .25em;
+  box-sizing: border-box;
+  width: 100%;
+  
+@media only screen and (max-width: 600px) {
+padding: .75rem 0;
+  }
+}
+
+#index .r a{
+  width: 100%;
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $r;
+}
+
+#index .r:hover{
+  
+  ._title h2{
+    border: 1px solid $r;
+  }
+  
+}
+
+#index .r:hover >._mirror a{
+  color: $r;
+}
+
+#index .r *{
+  margin-right: .5rem;
+}
+
+.r ._title{
+  width: 90%;
+  margin-bottom: .5rem;
+}
+
+.r ._title h2{
+  font-weight: normal;
+  font-size: 1.1rem;
+  border: 1px solid $w;
+  border-radius: 12px;
+  margin: 0rem -.3rem;
+  padding: .25rem;
+}
+
+.r ._type{
+  display: inline;
+  font-size: .65rem;
+  width: 10%;
+}
+
+
+.r ._desc{
+  width: 100%;
+  line-height: 150%;
+  p{
+    padding: 0; margin: 0;
+    margin-top: -.25rem;
+    font-size: .7rem;
+    max-width: 90%;
+    
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+
+._mirror{
+  margin: .25rem .1rem !important;
+  display: flex;
+}
+
+#index .r ._mirror a{
+  background: $w;
+  text-decoration: none;
+  padding: .25em;
+  margin: .1rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: 1px solid $r;
+  border-radius: 8px;
+  display: inline-block;
+  width: 6px; height: 6px;
+}
+
+#index .r ._mirror a:hover{
+  background: $r;
+}
+
+
